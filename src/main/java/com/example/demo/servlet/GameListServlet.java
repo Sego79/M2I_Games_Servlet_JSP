@@ -34,9 +34,9 @@ public class GameListServlet extends HttpServlet {
                 System.out.println(req.getHeaders("User-Agent").nextElement()); //on récupère les infos sur notre ordi
 
 
-        //Exemple 1 d'affichages de données sur l'entité dans notre navigateur
+        //Exemple 1 d'affichage de données sur l'entité dans notre navigateur
                 GameDao gameDao = new GameDao();
-                //on récupère les jeux dans la DA et une fois fait on les renvois dans la vue
+                //on récupère les jeux définis dans la DAO et une fois fait on les renvois dans la vue
                 List<Game> gameList = gameDao.getAll();
                 //on set les attributs sous la forme clé-valeur. La clé sera utilisée dans la JSP
                 req.setAttribute("games", gameList);
@@ -45,7 +45,7 @@ public class GameListServlet extends HttpServlet {
 //                        System.out.println(game.getId() + " - " + game.getName() + " - " + game.getDescription());
 //                });
 
-           //On renvoit les données à la JSP
+       //On renvoit les données à la JSP
                 req.getRequestDispatcher("/WEB-INF/list-game.jsp")
                         .forward(req, resp);
 

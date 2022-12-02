@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: zoran
@@ -9,12 +10,21 @@
 <html>
 <head>
     <title>Détail du jeu</title>
+    <link href="<c:url value="/assets/css/style.css" />" rel="stylesheet" type="text/css">
+<%--
+<link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet" type="text/css">
+--%>
 </head>
 <body>
 
 <h1>${name}</h1>
 <p>Description : ${description}</p>
 
+<form method="post" action="${pageContext.request.contextPath}/games/delete">
+    <input type="hidden" value="${id}" name="IdGame">
+    <button>Delete</button>
+</form>
+<a href="${pageContext.request.contextPath}/games">Retour</a>
 
 </body>
 </html>

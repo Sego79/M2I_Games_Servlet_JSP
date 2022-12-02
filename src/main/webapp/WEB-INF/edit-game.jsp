@@ -10,12 +10,14 @@
 <html>
 <head>
     <title>Modification d'un jeu</title>
+    <link href="<c:url value="/assets/css/style.css" />" rel="stylesheet" type="text/css">
 </head>
 <body>
 <h1>Formulaire de modification du jeu</h1>
 
 
 <form action="${pageContext.request.contextPath}/games/edit" method="post">
+<%-- l'ID peut être aussi mis dans l'URL d'action mais dans ce cas il sera visible--%>
     <input id="gameId" type="hidden" value="<c:out value="${id}"/>" name="gameId">
 
     <label for="gameName">Nom</label>

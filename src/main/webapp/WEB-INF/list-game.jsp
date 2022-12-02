@@ -10,8 +10,9 @@
 <html>
 <head>
     <title>Liste des jeux</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="<c:url value="/assets/css/style.css" />" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -24,7 +25,7 @@
     <th>#</th>
     <th>Name</th>
     <th>Description</th>
-    <th colspan="3">Actions</th>
+    <th colspan="3" class="Titre_table">Actions</th>
 
     </thead>
     <%--Corps de notre tableau--%>
@@ -38,14 +39,15 @@
              <a class="btn btn-primary" href="${pageContext.request.contextPath}/games/edit?id=${game.id}">
              </a>
              <button>Edit</button>
-             </form>
          </td>
          <td><form method="post" action="${pageContext.request.contextPath}/games/delete">
              <input type="hidden" value="${game.id}" name="IdGame">
              <button>Delete</button>
              </form>
          </td>
-         <td><a href="${pageContext.request.contextPath}/games/details?id=${game.id}">Détails</a></td>
+         <td>
+             <a href="${pageContext.request.contextPath}/games/details?id=${game.id}">Détails</a>
+         </td>
         </tr>
     </c:forEach>
     </tbody>

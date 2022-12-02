@@ -37,6 +37,8 @@ public class GameDao implements Dao<Game>{
 
     @Override
     public void update(Game gameParam) {
+        //On met à jour le nom et /ou la description mais pas l'Id qu'on récupère
+        //ON vérifie si l'ID est dans la liste avant de mettre à jour les paramètres nom et description
         games.stream()
                 .forEach(game -> {
                     if(game.getId() == gameParam.getId()) {
