@@ -11,7 +11,7 @@
     <title>Add game</title>
 </head>
 <body>
-
+<jsp:include page="header.jsp"></jsp:include>
 <h1>Add game</h1>
 <form method="post" action="/games/add">
     <label for="gameName">Name : </label>

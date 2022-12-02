@@ -15,6 +15,7 @@
 
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 
 <h1>List of games</h1>
 

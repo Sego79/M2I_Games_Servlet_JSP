@@ -16,7 +16,7 @@
 --%>
 </head>
 <body>
-
+<jsp:include page="header.jsp"></jsp:include>
 <h1>${name}</h1>
 <p>Description : ${description}</p>
 

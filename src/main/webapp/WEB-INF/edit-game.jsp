@@ -13,6 +13,7 @@
     <link href="<c:url value="/assets/css/style.css" />" rel="stylesheet" type="text/css">
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 <h1>Formulaire de modification du jeu</h1>
 
 
