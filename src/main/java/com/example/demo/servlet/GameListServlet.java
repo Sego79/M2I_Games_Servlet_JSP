@@ -50,7 +50,6 @@ public class GameListServlet extends HttpServlet {
                         .forward(req, resp);
 
 
-
         //Exemple 2 : on créé des balises html
                 PrintWriter writer = resp.getWriter();
                 resp.setContentType("text/html");

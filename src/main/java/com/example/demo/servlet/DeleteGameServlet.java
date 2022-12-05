@@ -15,11 +15,6 @@ import java.util.Optional;
 public class DeleteGameServlet extends HttpServlet {
 
 
-//    @Override
-//    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        req.getRequestDispatcher("WEB-INF/delete-game.jsp").forward(req, resp);
-//    }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //On récupère l'id mis en paramètre dans la jsp "list-game"

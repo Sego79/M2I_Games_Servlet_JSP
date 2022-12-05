@@ -28,6 +28,17 @@ public class LoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
+
+
+        //Ajout d'un essai pour tester le login pour le "contexte d'application"
+        if (getServletContext().getAttribute("nbLoginHit") != null) {
+            int hit = (int) getServletContext().getAttribute("nbLoginHit");
+            getServletContext().setAttribute("nbLoginHit", ++hit);
+        } else {
+            getServletContext().setAttribute("nbLoginHit", 1);
+        }
+
+
         if (username.equals("admin") && password.equals("qwerty")) {
             // Get existing session or create one if not exist
             HttpSession session = req.getSession(true);

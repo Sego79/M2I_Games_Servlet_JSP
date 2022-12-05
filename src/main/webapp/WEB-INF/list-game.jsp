@@ -56,5 +56,7 @@
 
 <a href="${pageContext.request.contextPath}/games/add">Add Game</a>
 
+<%--Ajout d'un essai pour tester le login pour le "contexte d'application"--%>
+<p>Nb Login Hit : ${applicationScope['nbLoginHit']}</p>
 </body>
 </html>
